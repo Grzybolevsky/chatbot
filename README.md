@@ -1,2 +1,7 @@
-# chatbot
-Script Language Laboratory Python + Rasa Chatbot
+# Python + Rasa based Discord chatbot.
+## Script Language Laboratory project
+
+## Introduction
+
+
+## Usage
