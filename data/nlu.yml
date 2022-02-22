@@ -32,12 +32,11 @@ nlu:
 
   - intent: affirm
     examples: |
+      - yes, please
+      - Yes
       - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
+      - ye
+      - yeah
 
   - intent: deny
     examples: |
@@ -89,3 +88,82 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
+
+  - lookup: day_of_week
+    examples: |
+      - monday
+      - tuesday
+      - wednesday
+      - thursday
+      - friday
+      - saturday
+      - sunday
+      - monday
+
+  - intent: ask_open
+    examples: |
+      - is this restaurant open on [monday](day_of_week) at [10](hour)
+      - is this restaurant open at [tuesday](day_of_week) [2](hour)
+      - is it possible to eat on [saturday](day_of_week) [11](hour)
+      - is it possible to eat at [sunday](day_of_week) [20](hour)
+      - is it open at [wedensday](day_of_week) [23](hour)
+      - are you open on [thursday](day_of_week) at [18](hour)
+      - can I come at [sunday](day_of_week) [15](hour)
+
+  - intent: ask_open_now
+    examples: |
+      - are you open now
+      - is the restaurant open right now
+      - do you serve now?
+      - are you open today
+
+  - intent: ask_menu
+    examples: |
+      - what is on menu?
+      - what is menu?
+      - what is in the menu
+      - what can I order
+      - what meals do you serve
+      - what food do you have?
+      - could I see the menu
+      - can I see the menu
+      - could you show me the menu
+      - show me menu
+      - give me menu
+      - I want to see menu
+
+  - intent: start_order
+    examples: |
+      - I would like to order
+      - order
+      - new order
+      - start order
+      - open order
+      - I want to order
+      - I want to eat
+      - Order please
+
+  - intent: order
+    examples: |
+      - Burger
+      - Pizza
+      - Tiramisu
+      - Hot-dog
+      - Hot-dog, 2 Burgers, Tiramisu
+      - Burger, Lasagne, Pizza
+      - Sphagetti
+      - 3 Burgers, 2 Tiramisu, Pizza with no tomatoes
+      - Spaghetti Carbonara, 2 Lasagne, 3 Pizza
+      - Tiramisu with sugar, 2 Burgers with extra meat
+
+  - intent: address
+    examples: |
+      - ul. Lojasiewicza 11/2, Krakow
+      - ul. Sodowa 16, Krakow
+      - 16 Sodowa street, Krakow
+      - 16 Sodowa St., Krakow
+      - Fiolkowa 3, Krakow
+      - ul. Fabryczna 28, Warszawa
+      - Marszalkowska 13, Warszawa
+      - Krakow, Rynek Glowny 18
+      - Krakow, Plac Szczepanski 10

@@ -9,22 +9,39 @@ stories:
       - intent: mood_great
       - action: utter_happy
 
-  - story: sad path 1
+  - story: ask open
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
+      - intent: ask_if_open
+      - action: check_if_open
 
-  - story: sad path 2
+  - story: ask open now
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
+      - intent: ask_if_open_now
+      - action: check_if_open_now
+
+  - story: ask menu
+    steps:
+      - intent: ask_menu
+      - action: show_menu
+
+  - story: create order with pick up
+    steps:
+      - intent: start_order
+      - action: utter_ask_order
+      - intent: order
+      - action: show_order
+      - action: utter_ask_delivery
       - intent: deny
-      - action: utter_goodbye
+      - action: utter_goodbye_pickup
+
+  - story: create order with delivery
+    steps:
+      - intent: start_order
+      - action: utter_ask_order
+      - intent: order
+      - action: show_order
+      - action: utter_ask_delivery
+      - intent: affirm
+      - action: utter_ask_address
+      - intent: address
+      - action: submit_order_delivery

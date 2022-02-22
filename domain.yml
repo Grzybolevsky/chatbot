@@ -8,6 +8,40 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - start_pizza
+  - ask_if_open
+  - ask_if_open_now
+  - ask_menu
+  - start_order
+  - order
+  - address
+
+entities:
+  - day_of_week
+  - hour
+  - selected_meals
+  - address
+
+actions:
+  - check_if_open_now
+  - check_if_open
+  - show_menu
+  - show_order
+  - submit_order_delivery
+  - utter_ask_address
+  - utter_goodbye_pickup
+  - utter_ask_delivery
+
+slots:
+  selected_meals:
+    type: text
+    mappings:
+      - type: from_text
+
+  address:
+    type: text
+    mappings:
+      - type: from_text
 
 responses:
   utter_greet:
@@ -28,6 +62,19 @@ responses:
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
+
+  utter_ask_order:
+    - text: "Please send us the whole order as a list of meals (with count or additional info)."
+
+  utter_ask_delivery:
+    - text: "Do you want the order to be delivered?"
+
+  utter_ask_address:
+    - text: "Please send us delivery address."
+
+  utter_goodbye_pickup:
+    - text: "Thank you, your order can be picked up at our restaurant address."
+
 
 session_config:
   session_expiration_time: 60
