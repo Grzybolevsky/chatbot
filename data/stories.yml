@@ -34,14 +34,14 @@ stories:
       - intent: deny
       - action: utter_goodbye_pickup
 
-  - story: create order with delivery
+  - story: create delivery order
     steps:
       - intent: start_order
       - action: utter_ask_order
       - intent: order
       - action: show_order
       - action: utter_ask_delivery
-      - intent: affirm
+      - intent: agree
       - action: utter_ask_address
       - intent: address
       - action: submit_order_delivery

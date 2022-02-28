@@ -30,8 +30,9 @@ nlu:
       - bye bye
       - see you later
 
-  - intent: affirm
+  - intent: agree
     examples: |
+      - y 
       - yes, please
       - Yes
       - yes
